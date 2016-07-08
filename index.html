@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coursera Data Products       Slidify Presentation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Coursera Data Products       Slidify Presentation">
+  <meta name="author" content="Tony O'Donoghue">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Coursera Data Products       Slidify Presentation</h1>
+    <h2>Linear Regression Application</h2>
+    <p>Tony O'Donoghue<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Linear Regression App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This Linear Regression Application allows the user to:</p>
+
+<ul>
+<li>Create some random data by clicking Generate Random Data.</li>
+<li>Upload a text file containing numeric data with optional header by clicking Choose File</li>
+<li><p>Displays data and user can perform linear regression.</p>
+
+<p>The text file can have an optional header (by ensuring the corresponding checkbox is checked), and the data must be numeric. N/A data is replaced by 0.
+The text file separator can be a comma, semicolan or a tab (specified by the radio button). Once the file is loaded or data generated, the user can view the data at the bottom of the Main tab. </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Application Front-End</h2>
+  </hgroup>
+  <article data-timings="">
+    <table>
+<tr>
+<td>
+<img src='assets/img/app.png' >
+</td>
+<td>
+There are two tabs plus a side bar for uploading or generating data.
+</td>
+</tr>
+</table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Linear Regression Recap</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using cars data can plot a regression line of stopping distance against speed.</p>
+
+<pre><code class="r">plot(cars)
+abline(lm(dist ~ speed, data = cars), col = &quot;blue&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>Simple Linear regression 
+assumes that there is approximately a linear relationship between X and Y . Mathematically, we can write this linear relationship as  Y ≈ β0 + β1X.</p>
+
+<p>In general, suppose that we have p distinct predictors. Then the multiple
+linear regression model takes the form
+Y = β0 + β1X1 + β2X2 + · · · + βpXp + error</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Correlation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application also produces a correlation plot of all variables with each other. The diagonal of the plot contains a large circle which simply means its fully correlated with itself. Each variable is correlated with the other using the default &quot;pearson&quot; correlation method: </p>
+
+<p>\[ r_{xy} =  \dfrac{\sum_{i=1}^{n}{(x_i-\bar{x})(y_i-\bar{y})}}{\sqrt{\sum_{i=1}^{n}{(x_i-\bar{x})^2(y_i-\bar{y})^2}}} \]</p>
+
+<p>A correlation value of 1 means perfectly correlated in the positive sense, 0 means no correlation, -1 means perfectly correlated in the negative. The blue big dot along the diagonal simply show the variable is fully correlated with itself.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Linear Regression App'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Application Front-End'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Linear Regression Recap'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Correlation'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
